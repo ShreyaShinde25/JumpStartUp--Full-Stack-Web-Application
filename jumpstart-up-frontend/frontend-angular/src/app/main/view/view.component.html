@@ -1,0 +1,372 @@
+<body _ngcontent-hbo-c115 style="height: 922px; width:1900px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin"
+                                class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>{{fullName}}</h4>
+                                <p class="text-secondary mb-1">{{type}}</p>
+                                <!-- <button class="btn btn-outline-primary">Message</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" font-size="20px">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                              </svg>Linkedin</h6>
+                            <span class="text-secondary">{{linkedin_link}}</span>
+                    </ul>
+                </div>
+                <div class="card mt-3" *ngIf="this.type=='entrepreneur'">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-globe mr-2 icon-inline">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>Company Name</h6>
+                            <span class="text-secondary">{{company_name}}</span>
+                    </ul>
+                </div>
+
+                <div class="card mt-3" *ngIf="this.type=='entrepreneur'">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                               <h3> Pitch</h3>
+                            <span class="text-secondary">{{pitch}}</span>
+                        
+                    </ul>
+                    
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{fullName}}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="badcd3cafad0cfd1d7cfd294dbd6">{{email}}</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Phone</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                {{phone}}
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Domain</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                           {{domain}}
+                                        </div>
+                                    </div>
+                                    <hr> -->
+                        <!-- <div class="row">
+                            <div class="col-sm-12">
+                                <a class="btn btn-info " target="__blank"
+                                    href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row gutters-sm">
+                    
+                    <div class="col-sm-6 mb-3">
+                        <div class="card h-100" *ngIf="type!='entrepreneur'">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2">assignment</i>Education
+                                </h6>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Insitiution</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{institution}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Degree</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{degree}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Major</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{major}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Year</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{year}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Work Experience</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{work_experience}}
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+                        <div class="card h-50" *ngIf="type=='entrepreneur'">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2">assignment</i>Education
+                                </h6>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Insitiution</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{institution}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Degree</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{degree}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Major</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{major}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Year</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{year}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Work Experience</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{work_experience}}
+                                    </div>
+                                </div>
+                                <hr>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+
+                    <div class="col-sm-6 mb-3" *ngIf="this.type=='freelancer'">
+                        <div class="card h-30">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2">assignment</i> Skills
+                                </h6>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Skills</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{skills}}
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ENTREPRENEUR-->
+                    <div class="col-sm-6 mb-3" *ngIf="this.type=='entrepreneur'">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                        class="material-icons text-info mr-2">assignment</i>Company Details
+                                </h6>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Domain</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{domain}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Stakeholders</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{stakeholder}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Company Size</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{company_size}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Funding Status</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{funding_status}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Equity Offered?</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{equity_offered}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Open to Negotiations?</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{open_to_negotiations}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Assets</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{assets}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Funding Status</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{funding_status}}
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Profits in last FY</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        {{profits_in_last_fy}}
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--INVESTOR-->
+                    <div class="col-sm-6 mb-3" *ngIf="this.type=='investor'">
+                        <div class="card h-60">
+                            <div class="card-body">
+                                <h6 class="d-flex align-items-center mb-3"><i
+                                    class="material-icons text-info mr-2">assignment</i>Investing Details
+                            </h6>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Domain</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{domain}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Funding Available</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{funding_available}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Brands Built</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    {{brands_built}}
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        </div>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>

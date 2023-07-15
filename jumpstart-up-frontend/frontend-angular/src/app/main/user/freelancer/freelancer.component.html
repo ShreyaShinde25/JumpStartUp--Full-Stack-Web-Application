@@ -1,0 +1,45 @@
+<!-- <div class="container-fluid">
+    <div class="row flex-nowrap"> -->
+        <div class="album col py-2" *ngIf="flag==true">
+            <div class="container" style="margin-left: 151px; padding-left: 90px; padding-right: 50px;">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let index of company_obj; let i = index">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top"
+                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                                src="../../../../assets/images/{{i}}.svg"
+                                data-holder-rendered="true">
+                            <div class="card-body">
+                                <p class="card-text">Company Name: {{index.company_name}}</p>
+                                <div class="d-flex justify-content-between text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" (click)=viewCompanies(index.entrepreneurUUID)>View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="album col py-2" *ngIf="flag==false">
+            <div class="container" style="margin-left: 151px; padding-left: 90px; padding-right: 50px;">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let index of job_obj; let i = index">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top"
+                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                                src="../../../../assets/images/job{{i}}.png"
+                                data-holder-rendered="true">
+                            <div class="card-body">
+                                <p class="card-text">Job Description: {{index.description}}</p>
+                                <p class="card-text">Skills Required:{{index.skills}}</p>
+                                <div class="d-flex justify-content-between text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" (click)=viewJobDetails(index.jobUuid)>View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

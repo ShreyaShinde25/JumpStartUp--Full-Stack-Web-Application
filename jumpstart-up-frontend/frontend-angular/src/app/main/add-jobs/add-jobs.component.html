@@ -1,0 +1,63 @@
+<div class="container" style="margin-left: 151px; padding-left: 90px; padding-right: 50px;">
+<div style="width: 800px;">
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out details</ng-template>
+            <mat-form-field appearance="fill">
+              <mat-label>Job Description</mat-label>
+              <input matInput placeholder="JobDescription" formControlName="job_description" required>
+            </mat-form-field>
+            <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Select the job type</mat-label>
+                  <select matNativeControl formControlName= "job_type" required>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="contract">Contract</option>
+                  </select>
+                </mat-form-field>
+              </div>
+            <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Is the job active?</mat-label>
+                  <select matNativeControl formControlName= "is_active" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </mat-form-field>
+              </div>
+
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Number of Openings</mat-label>
+                    <input matInput placeholder="Number" formControlName="numberOfOpenings" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Skills Required: </mat-label>
+                    <input matInput placeholder="skills" formControlName="skills" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Pay Estimate</mat-label>
+                    <input matInput placeholder="100$" formControlName="pay_estimate" required>
+                </mat-form-field>
+            </div>
+            <!-- <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Posting Date</mat-label>
+                    <input matInput placeholder="25-03-2023" formControlName="date" required>
+                </mat-form-field>
+            </div> -->
+            
+            <div>
+              <button (click)="onSubmit()" mat-button>Post</button>
+            </div>
+          </form>
+        </mat-step>
+        </mat-stepper>
+    </div>
+</div>

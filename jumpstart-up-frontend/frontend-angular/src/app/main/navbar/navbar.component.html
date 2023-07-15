@@ -1,0 +1,79 @@
+    <div style=" margin-left:-20px; padding-right: 30px;" class="container-fluid" >
+<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark" >
+                <div
+                    class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 apple bg-dark" style="left: 0px; margin-top: 0px;">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <img src="../../../assets/Items-page/logo.png" height="50px" width="65px">
+                        <span class="fs-5 d-none d-sm-inline m-2 color">JumpStartUp</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu" >
+                        <li class="nav-item">
+                            <a  class="nav-link align-middle px-0 color" >
+                                <i class="bi-emoji-smile" style="font-size: 24px"></i> <span class="ms-1 d-none d-sm-inline">Welcome {{user}}!</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"  [style.display]="checkRole() === 'f' ? 'visible' : 'none'" (click)="viewStartUps()" >
+                            <a  class="nav-link align-middle px-0 color hovered">
+                                <i class="fs-4 bi-cash"></i> <span class="ms-1 d-none d-sm-inline">StartUps</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [style.display]="checkRole() === 'i' ? 'visible' : 'none'" (click)="displayCompanies()">
+                            <a  class="nav-link align-middle px-0 color hovered" >
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">StartUps</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"  [style.display]="checkRole() === 'f' ? 'visible' : 'none'" (click)="viewJobs()">
+                            <a class="nav-link align-middle px-0 color hovered">
+                                <i class="fs-4 bi-file-person"></i> <span class="ms-1 d-none d-sm-inline">Openings</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"  [style.display]="checkRole() === 'e' ? 'visible' : 'none'" (click)="viewInvestor()">
+                            <a class="nav-link align-middle px-0 color hovered">
+                                <i class="fs-4 bi-file-person"></i> <span class="ms-1 d-none d-sm-inline">Investors</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"  [style.display]="checkRole() === 'e' ? 'visible' : 'none'" (click)="viewFreelancer()">
+                            <a class="nav-link align-middle px-0 color hovered">
+                                <i class="fs-4 bi-file-person"></i> <span class="ms-1 d-none d-sm-inline">Freelancers</span>
+                            </a>
+                        </li>
+                        <li class="nav-item"  [style.display]="checkRole() === 'e' ? 'visible' : 'none'" (click)="addJobPostings()" >
+                            <a class="nav-link align-middle px-0 color hovered">
+                                <i class="fs-4 bi-file-person"></i> <span class="ms-1 d-none d-sm-inline">Add Job Postings</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" (click)="openChat()" >
+                            <a class="nav-link align-middle px-0 color hovered">
+                                <i class="bi-chat-left-dots-fill" style="font-size: 24px"></i> <span class="ms-1 d-none d-sm-inline">Chat </span>
+                            </a>
+                        </li>
+
+                        <!-- <li class="nav-item" [style.display]="checkRole() === 'i' ? 'visible' : 'none'">
+                            <a href="#" class="nav-link align-middle px-0 color hovered">
+                                <i class="fs-4 bi-headset" ></i> <span class="ms-1 d-none d-sm-inline">Connect with
+                                    Business</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" [attr.data-bs-toggle]="'dropdown'" aria-expanded="false">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="hugenerd" width="30"
+                                height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">{{user_name}}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item color hovered" href="#">Settings</a></li>
+                            <li><a class="dropdown-item color hovered" (click)="go_to_profile_page()">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider color">
+                            </li>
+                            <li><a class="color hovered dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>

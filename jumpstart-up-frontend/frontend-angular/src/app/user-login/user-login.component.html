@@ -1,0 +1,38 @@
+<div class="body">
+	<div class="main">
+
+		<input type="checkbox" id="chk" aria-hidden="false" [checked]="a==true">
+
+		<div class="signup">
+			<form [formGroup]="signUpForm" (ngSubmit)="validationSignup()">
+				<label for="chk" aria-hidden="true">Sign up</label>
+				<input type="text" name="user" placeholder="User name" formControlName="user">
+				<input type="email" name="email" placeholder="Email" formControlName="email">
+				<input type="password" name="pswd" placeholder="Password" formControlName="pswd">
+				<select class="form-select" style="height:30px" aria-label="Default select example" formControlName="type">
+				<!-- <select class="form-select" style="height:30px" placeholder="type"  formControlName="type"> -->
+					<option value="entrepreneur" selected>Entrepreneur</option>
+					<option value="freelancer">Freelancer</option>
+					<option value="investor">Investor</option>
+				</select>
+				
+				<button class="button-on-black">Sign up</button>
+
+				<div class="invalid" *ngIf="varCheck">{{errorMsg}}</div>
+			</form>
+		</div>
+
+		<div class="login" id="login">
+			<form [formGroup]="loginForm" (ngSubmit)="validationLogin()">
+				<label for="chk" aria-hidden="true">Login</label>
+				<input type="text" name="user" placeholder="User Name" formControlName="user">
+				<input type="password" name="pswd" placeholder="Password" formControlName="pswd">
+				<!-- <button [disabled]="loginForm.invalid" >Login</button> --> <!--for reference-->
+				<button>Login</button>
+
+				<div class="invalid" *ngIf="varCheck">{{errorMsg}}</div>
+			</form>
+		</div>
+		
+	</div>
+</div>

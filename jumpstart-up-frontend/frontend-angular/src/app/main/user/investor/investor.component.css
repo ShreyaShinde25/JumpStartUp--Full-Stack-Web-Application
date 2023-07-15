@@ -1,0 +1,51 @@
+@media (min-width: 768px) {
+    .apple {
+        position: fixed;
+    }
+}
+
+.color {
+    color: #3eb0b8 !important;
+}
+
+.btn-outline-primary {
+    color: #3eb0b8;
+    background-color: transparent;
+    background-image: none;
+    border-color: #3eb0b8
+}
+
+.btn-outline-primary:hover {
+    color: rgb(255, 255, 255);
+    background-color: #3eb0b8;
+    border-color: teal
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+    box-shadow: 0 0 0 .2rem rgba(0, 128, 128, 0.5)
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+    color: #3eb0b8;
+    background-color: transparent
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #3eb0b8;
+    border-color: teal
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(0, 128, 128, 0.5)
+}
+
+.hovered:hover {
+    color: #fff !important;
+}

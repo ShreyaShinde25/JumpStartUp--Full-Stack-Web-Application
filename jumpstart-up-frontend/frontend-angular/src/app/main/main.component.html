@@ -1,0 +1,35 @@
+<!-- <div class="container-fluid">
+    <div class="row">
+        <app-navbar></app-navbar>
+        <div class="container">
+            <div class="row">
+                <app-user></app-user>
+            </div>
+        </div>
+        </div>
+        </div> -->
+
+<div *ngIf=" router.url.includes('/home')">
+<app-navbar></app-navbar>
+ <app-user></app-user>
+</div>
+
+<div *ngIf=" router.url.includes('/profile')">
+    <app-navbar></app-navbar>
+    <app-profile></app-profile>
+</div>
+
+<div *ngIf=" router.url.includes('/displayjob')">
+    <app-navbar></app-navbar>
+    <app-jobs></app-jobs>
+</div>
+
+<div *ngIf=" router.url.includes('/view')">
+    <app-navbar></app-navbar>
+    <app-view></app-view>
+</div>
+
+<div *ngIf=" router.url.includes('/addJobs')">
+    <app-navbar></app-navbar>
+    <app-add-jobs></app-add-jobs>
+</div>

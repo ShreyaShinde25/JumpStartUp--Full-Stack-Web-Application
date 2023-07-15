@@ -1,0 +1,47 @@
+
+        <div class="album col py-2" *ngIf="flag==true">
+            <div class="container" style="margin-left: 151px; padding-left: 90px; padding-right: 50px;">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let index of investor_obj; let i = index">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top"
+                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                                src="../../../../assets/images/in{{i}}.jpg"
+                                data-holder-rendered="true">
+                            <div class="card-body">
+                                <p class="card-text">Investor Name: {{index.firstName+" "+index.lastName}}</p>
+                                <p class ="card-text">domain: {{index.domain}}</p>
+                                <p class="card-text">Fundings Available:{{index.funding_available}}</p>
+                                <div class="d-flex justify-content-between text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" (click)=viewInvestors(index.uuid)>View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="album col py-2" *ngIf="flag==false">
+            <div class="container" style="margin-left: 151px; padding-left: 90px; padding-right: 50px;">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let index of freelancer_obj; let i = index;">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="card-img-top"
+                                data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                                alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+                                src="../../../../assets/images/free{{i}}.jpg"
+                                data-holder-rendered="true">
+                            <div class="card-body">
+                                <p class="card-text">Freelancer Name: {{index.firstName+" "+index.lastName}}</p>
+                                <p class ="card-text">Majors: {{index.major}}</p>
+                                <p class="card-text">Skills:{{index.skills}}</p>
+                                <div class="d-flex justify-content-between text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" (click)=viewFreelancers(index.uuid)>View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

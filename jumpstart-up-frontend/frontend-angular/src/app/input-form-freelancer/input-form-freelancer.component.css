@@ -1,0 +1,21 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .apple {
+        position: fixed;
+    }
+}
+
+.color {
+    color: #3eb0b8 !important;
+}
+
+.pb-4 {
+  padding-bottom: 2.5rem!important;
+}

@@ -1,0 +1,26 @@
+<!-- <p>user works!</p>
+
+<ng-container *ngIf="checkRole()=='i'; then investorBlock; checkRole()=='f';then freelancerBlock ; checkRole()=='e'; then entrepreneurBlock; "></ng-container>
+
+<ng-template #investorBlock><app-investor></app-investor></ng-template>
+<ng-template #freelancerBlock><app-freelancer></app-freelancer></ng-template>
+<ng-template #entrepreneurBlock><app-entrepreneur></app-entrepreneur></ng-template> -->
+
+<div *ngIf="checkRole()=='i'">
+    <app-investor [childVar]="user"></app-investor>
+    
+</div>
+
+<div *ngIf="checkRole()=='e'">
+    <!-- <app-entrepreneur></app-entrepreneur> -->
+    <app-entrepreneur [childVar]="user"></app-entrepreneur>
+
+</div>
+
+<div *ngIf="checkRole()=='f'">
+    <!-- <app-freelancer></app-freelancer> -->
+    <app-freelancer [childVar]="user"></app-freelancer>
+</div>
+
+
+

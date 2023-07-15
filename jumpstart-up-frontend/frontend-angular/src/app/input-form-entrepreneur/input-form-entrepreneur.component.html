@@ -1,0 +1,195 @@
+<div>
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark" style="height:919px">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 apple">
+            <a href="/"
+                class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <img src="../../assets/Items-page/logo.png" height="50px" width="65px">
+                <span class="fs-5 d-none d-sm-inline m-2 color">JumpStartUp</span>
+            </a>
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                id="menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link align-middle px-0 color hovered">
+                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown pb-4">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                    id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="hugenerd" width="30" height="30"
+                        class="rounded-circle">
+                    <span class="d-none d-sm-inline mx-1">{{user_name}}</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item color hovered" href="#">Settings</a></li>
+                    <li><a class="dropdown-item color hovered" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider color">
+                    </li>
+                    <li><a class="color hovered dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div style="width: 800px;">
+            <mat-stepper [linear]="isLinear" #stepper>
+                <mat-step [stepControl]="firstFormGroup">
+                  <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out Basic details</ng-template>
+                    <mat-form-field appearance="fill">
+                      <mat-label>First Name</mat-label>
+                      <input matInput placeholder="First name" formControlName="firstName" required>
+                    </mat-form-field>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Last name" formControlName="lastName" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Phone Number</mat-label>
+                            <input matInput placeholder="Phone Number" formControlName="phoneNumber" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                      <button mat-button matStepperNext>Next</button>
+                    </div>
+                  </form>
+                </mat-step>
+
+                <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                      <ng-template matStepLabel>Education Details</ng-template>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Insitution Name</mat-label>
+                        <input matInput placeholder="Insitution Name" formControlName="institutionName" required>
+                      </mat-form-field>
+                      <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Degree</mat-label>
+                              <input matInput placeholder="degree" formControlName="degree" required>
+                          </mat-form-field>
+                      </div>
+                      <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Major</mat-label>
+                              <input matInput placeholder="major" formControlName="major" required>
+                          </mat-form-field>
+                      </div>
+                      <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Year of Completion</mat-label>
+                              <input matInput placeholder="Year of Completion" formControlName="yearOfCompletion" required>
+                          </mat-form-field>
+                      </div>
+                      <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Work Experience</mat-label>
+                              <input matInput placeholder="Work Experience" formControlName="workExperience" required>
+                          </mat-form-field>
+                      </div>
+                      
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                      </div>
+                    </form>
+                  </mat-step>
+
+                <mat-step [stepControl]="thirdFormGroup" label="Entrepreneur Details">
+                  <form [formGroup]="thirdFormGroup">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Domain</mat-label>
+                      <input matInput formControlName="domain" placeholder="Telecom" required>
+                    </mat-form-field>
+                    <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Company Name</mat-label>
+                        <input matInput formControlName="company_name" placeholder="Google" required>
+                      </mat-form-field>
+                    </div>
+                    <div>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Is your company Registered?</mat-label>
+                        <select matNativeControl formControlName= "is_registered" required>
+                          <option value="yes">Yes</option>
+                          <option value="no">No</option>
+                        </select>
+                      </mat-form-field>
+                    </div>
+
+                      <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>StakeHolder</mat-label>
+                              <input matInput formControlName="stakeholder" placeholder="Elon Mask"
+                                     required>
+                            </mat-form-field>
+                      </div>
+                      <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Company Size</mat-label>
+                              <input matInput formControlName="company_size" placeholder="50" required>
+                            </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Are you open to Negotiations?</mat-label>
+                          <select matNativeControl formControlName="funding_status" required>
+                            <option value="Seed">Seed</option>
+                            <option value="Series A">Series A</option>
+                            <option value="Series B">Series B</option>
+                            <option value="Series C">Series C</option>
+                            <option value="Public">Public</option>
+                          </select>
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label> Assets</mat-label>
+                            <input matInput formControlName="assets" placeholder="Factory" required>
+                          </mat-form-field>
+                      </div>
+
+                        <div>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Equity Offered</mat-label>
+                              <input matInput formControlName="equity_offered" placeholder="5%" required>
+                            </mat-form-field>
+                        </div>
+
+                      <div>
+                        <mat-form-field appearance="fill">
+                          <mat-label>Are you open to Negotiations?</mat-label>
+                          <select matNativeControl formControlName="open_to_negotiations" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                          </select>
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>profit in Last FY</mat-label>
+                            <input matInput formControlName="profits_in_last_fy" placeholder="1000$" required>
+                          </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Pitch</mat-label>
+                            <input matInput formControlName="pitch" placeholder="What's your profuct ?" required>
+                          </mat-form-field>
+                      </div>
+                      <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button (click)="onSubmit()" mat-button matStepperSubmit>Submit</button>
+                      </div>
+                  </form>
+                </mat-step>
+
+            </mat-stepper>
+        </div>
+    </div>
+</div>
